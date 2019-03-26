@@ -3,8 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <title>HIV Assessment</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js"></script>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-reboot.css">
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
-quiz
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">HIV Risk Assesment</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li><li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div id="visible">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>HIV Assessment:</h1>
+  <br>
+  <br>
+  <h2>Are you a man who has had sex with another man?</h2><br>
+    <div class="row">
+      <div class="col-5">
+        <button id="y1" onclick="yes('1');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+      </div>
+      <div class="col-5">
+        <button id="n1" onclick="no('1');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">No</button>
+      </div>
+    </div>
+  <br>
+ <h2>Have you had sex—anal or vaginal—with an HIV-positive partner?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y2" onclick="yes('2');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n2" onclick="no('2');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you had more than one sex partner?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y3" onclick="yes('3');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n3" onclick="no('3');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you injected drugs and shared needles or works (for example, water or cotton) with others?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y4" onclick="yes('4');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n4" onclick="no('4');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you exchanged sex for drugs or money?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y5" onclick="yes('5');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n5" onclick="no('5');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off"  role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you been diagnosed with, or sought treatment for, another sexually transmitted disease?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y6" onclick="yes('6');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n6" onclick="no('6');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off"  role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you been diagnosed with or treated for hepatitis or tuberculosis (TB)?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y7" onclick="yes('7');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n7" onclick="no('7');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <h2>Have you had sex with someone who could answer "yes" to any of the above questions or someone whose sexual history you don't know?</h2><br>
+  <div class="row">
+    <div class="col-5">
+      <button id="y8" onclick="yes('8');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off"  role="button">Yes</button>
+    </div>
+    <div class="col-5">
+      <button id="n8" onclick="no('8');" class="btn btn-success btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off"role="button">No</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+      <div><button id="submit" onclick="submit();" class="btn btn-lg btn-primary btn-block">Submit</button></div>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div id="modal-text" class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" href="http://www.google.com">Find a Clinic</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
