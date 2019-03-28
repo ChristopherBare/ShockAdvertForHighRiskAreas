@@ -1,4 +1,6 @@
 //= require jquery
+//= require bootstrap-sprockets
+//= require bootstrap
 
 var y = 0;
 var n = 0;
@@ -35,13 +37,13 @@ function submit() {
     if (y > 1) {
       document.getElementById("visible").className = 'hide';
       document.getElementById("modal-text").innerHTML = 'It is recommended that you go get tested for HIV!';
-      $('#Modal').modal("show");
+     // $('#Modal').modal("show");
     } else {
       document.getElementById("visible").className = 'hide';
       document.getElementById("modal-text").innerHTML = "It is still recommended that you go get tested for HIV, " +
         "however, you don't currently seem to be at risk for it." ;
 
-      $('#Modal').modal("show");
+     // $('#Modal').modal("show");
 
     }
   }else {
